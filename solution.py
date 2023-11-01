@@ -5,13 +5,6 @@ import pickle, tqdm, os, time
 
 
 class PCA():
-    '''
-    Important!! Read before starting.
-    1. To coordinate with the note at http://people.tamu.edu/~sji/classes/PCA.pdf,
-    we set the input shape to be [256, n_samples].
-    2. According to the note, input matrix X should be centered before doing SVD
-
-    '''  
     def __init__(self, X, n_components):
         '''
         Args:
@@ -95,19 +88,7 @@ def frobeniu_norm_error(A, B):
     return np.linalg.norm(A-B)
 
 
-class AE(nn.Module):
-    '''
-    Important!! Read before starting.
-    1. To coordinate with the note at http://people.tamu.edu/~sji/classes/PCA.pdf and
-    compare with PCA, we set the shape of input to the network as [256, n_samples].
-    2. Do not do centering. Even though X in the note is the centered data, the neural network is 
-    capable to learn this centering process. So unlike PCA, we don't center X for autoencoders,
-    and we will still get the same results.
-    3. Don't change or slightly change hyperparameters like learning rate, batch size, number of
-    epochs for 5(e), 5(f) and 5(g). But for 5(h), you can try more hyperparameters and achieve as good results
-    as you can.
-
-    '''   
+class AE(nn.Module): 
     def __init__(self, d_hidden_rep):
         '''
         Args:
@@ -127,18 +108,6 @@ class AE(nn.Module):
         self._network()
         
     def _network(self):
-        '''
-
-        You are free to use the listed functions and APIs from torch or torch.nn:
-            torch.empty
-            nn.Parameter
-            nn.init.kaiming_normal_
-        
-        You need to define and initialize weights here.
-            
-        '''
-
-        ### YOUR CODE HERE
 
         '''
         Note: you should include all the three variants of the networks here. 
