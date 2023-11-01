@@ -23,7 +23,7 @@ def test_ae(A, p):
     return final_w
 
 if __name__ == '__main__':
-    dataloc = "../data/USPS.mat"
+    dataloc = "USPS.mat"
     A = load_data(dataloc)
     A = A.T
     ## Normalize A
