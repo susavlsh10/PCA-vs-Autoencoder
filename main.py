@@ -29,7 +29,6 @@ if __name__ == '__main__':
     ## Normalize A
     A = A/A.max()
 
-    ### YOUR CODE HERE
     # Note: You are free to modify your code here for debugging and justifying your ideas for 5(f)
     ps = [32, 64, 128]
     for p in ps:
@@ -37,7 +36,6 @@ if __name__ == '__main__':
         final_w = test_ae(A, p) 
         error = frobeniu_norm_error(G, final_w)
         print('AE vs PCA. Error in projection matrix G and Optimized weight W: for {k}-dimensional hidden representation is'.format(k=p), error)
-    ### END YOUR CODE 
     
 
 
