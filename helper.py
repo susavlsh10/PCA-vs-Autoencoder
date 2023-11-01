@@ -6,4 +6,5 @@ import scipy.io as scio
 def load_data(dataloc):
 	data = scio.loadmat(dataloc)
 	return data['A']
+	
 
