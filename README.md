@@ -13,5 +13,7 @@ In this project, we apply the PCA and the autoencoder (AE) to a collection of ha
 | 64  | 85.87 | 86.26       |
 | 128 | 45.62 | 46.39       |
 
+From the table, it's evident that for all values of "p=d", PCA tends to have a slightly lower reconstruction error compared to Autoencoder. Lower reconstruction error is generally desired as it indicates a more accurate representation of the original data. Overall, the reconstruction errors are very similar which suggests that Autoencoder learns to reduce the dimensionality in a similar way to PCA.
+
 
 
